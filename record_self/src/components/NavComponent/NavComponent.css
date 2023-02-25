@@ -1,0 +1,13 @@
+nav{
+    background-color: #38497e;
+    color: #fff;
+    padding-left: 30px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    font-weight: 180;
+    font-family: 'Roboto', sans-serif;
+    justify-content: flex-start;
+    align-items: center;
+}

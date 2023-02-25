@@ -1,0 +1,27 @@
+.card{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sync_btn{
+    
+    background-color: #02479b;
+    color: #fff;
+    font-size: 20px;
+    border-radius:  25px;
+    width: 130px;
+    padding: 10px 30px 10px 30px;
+
+}
+.text{
+    font-size: 30px;
+    font-weight: 180;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    color: #707172;
+    margin-bottom: 20px;
+}
