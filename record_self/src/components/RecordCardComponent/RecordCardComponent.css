@@ -1,14 +1,15 @@
 .record-card{
     height: 200px;
     width: 200px;
-    background-color: #8a2be2;
+    background-color: rgb(200, 200, 200);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 10px;
+    padding: 20px;
     align-items: center;
-    border-radius: 25%;
+    border-radius: 10%;
     margin: 20px;
+    box-shadow: 0px 10px 10px 0px rgb(120, 120, 120);
 }
 .record-card img{
     
@@ -17,3 +18,57 @@
     width: 120px;
     border-radius: 50%;
 }
+.record-title {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 45%;
+    align-self: flex-start;
+}
+.record-title p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+}
+.record-artist{
+    align-self: flex-start;
+    font-size: smaller;
+    margin-top: 0px;
+}
+.record-title-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    margin-top: 10px;
+}
+.heart{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 55%;
+}
+.heart img{
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    
+}
+.heart p{
+    margin:0px;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    
+}
+
+/* .record-info{
+    display: flex;
+    flex-direction: column;
+} */

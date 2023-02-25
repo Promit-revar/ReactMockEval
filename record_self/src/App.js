@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react"; 
+import "./assets/style.css";
 
 import Card from "./components/CardComponent/CardComponent";
 
