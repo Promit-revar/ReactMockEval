@@ -1,7 +1,12 @@
+.record-card-dark{
+    background-color: #ABABAB
+}
+.record-card-light{
+    background-color: #DFDFDF
+}
 .record-card{
     height: 200px;
     width: 200px;
-    background-color: rgb(200, 200, 200);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

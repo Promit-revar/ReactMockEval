@@ -11,7 +11,6 @@ export default function CardComponent(props){
     const handleSyncClick = async() => {
         const res = await makeRequest(RequestData);
         setData(res);
-        
         setSync(true);
     }
     
@@ -27,7 +26,7 @@ export default function CardComponent(props){
     else{
         return (
             <div className="card">
-                {console.log(data)}
+                {/* {console.log(data)} */}
                 <RecordsComponent records={data}/>
             </div>
         )

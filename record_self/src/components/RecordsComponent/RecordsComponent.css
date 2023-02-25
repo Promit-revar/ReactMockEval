@@ -1,9 +1,17 @@
-.records-background{
-    background-color: rgb(243, 243, 243);
+.records{
+    background-color: #F5F5F5;
     width: 80%;
+}
+.records-content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.records-title{
+    font-size: 30px;
+    font-weight: 180;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
 }
