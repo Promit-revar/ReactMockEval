@@ -26,8 +26,8 @@ export default function CardComponent(props){
     else{
         return (
             <div className="card">
-                {/* {console.log(data)} */}
-                <RecordsComponent records={data}/>
+                {console.log(data)}
+                <RecordsComponent />
             </div>
         )
     }

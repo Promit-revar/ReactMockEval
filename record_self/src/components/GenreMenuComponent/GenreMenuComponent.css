@@ -1,0 +1,29 @@
+.genre-menu{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    height: 160px;
+    width: 100%;
+}
+.genre-menu-content{
+    position: relative;
+}
+ .genre-menu-content img{
+    position: absolute;     
+    top: 0;
+    left: 0;
+}
+.genre-menu-content select{
+    position: absolute;
+    top: 40px;
+    left: 105px;
+    margin: 0px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #4c63AA;
+    text-align: center;
+}

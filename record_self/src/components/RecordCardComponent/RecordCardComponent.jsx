@@ -4,12 +4,12 @@ import './RecordCardComponent.css';
 import heart_red from '../../assets/heart-red.svg';
 import heart_gray from '../../assets/heart-gray.svg';
 export default function RecordCardComponent(props){
-    console.log(props.likes);
+    //console.log(props.likes);
     if(props.likes){
         return(
         <div className={`record-card ${(props.index%2)?"record-card-light":"record-card-dark"}`}>
             <div className='record-image'>
-                <img src={props.data.imageUrl} alt="props.name"/>
+                <img src={props.data.imageUrl} alt={props.data.imageUrl}/>
             </div>
             <div className='record-title-bar'>
                     <div className='record-title'>
