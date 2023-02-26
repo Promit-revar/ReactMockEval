@@ -17,7 +17,7 @@
     box-shadow: 0px 10px 10px 0px rgb(120, 120, 120);
 }
 .record-card img{
-    
+    cursor: pointer;
     display: flex;
     height: 120px;
     width: 120px;
@@ -33,6 +33,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis !important;
+    cursor: pointer;
 }
 .record-artist{
     align-self: flex-start;

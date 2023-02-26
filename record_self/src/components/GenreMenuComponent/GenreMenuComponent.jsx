@@ -3,7 +3,7 @@ import React from "react";
 import './GenreMenuComponent.css';
 import {dataContext} from '../../DataContext/dataContext';
 export default function GenreMenuComponent(props){
-    const {data,setData} = React.useContext(dataContext);
+    const {data} = React.useContext(dataContext);
     const genres = [...new Set(data.map((item)=>item.genre.name))];
     const [genre,setGenre] = React.useState(genres[0]);
     const handleChange = (event) => {

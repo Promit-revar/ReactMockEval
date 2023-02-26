@@ -8,27 +8,34 @@ import icon_genre from '../../assets/icon-genre.svg';
 import icon_grid from '../../assets/icon-grid.svg';
 import GenreMenuComponent from '../GenreMenuComponent/GenreMenuComponent';
 import {dataContext} from '../../DataContext/dataContext';
-import { useEffect } from 'react';
+import likeEndpoint from '../../endpoints/likeRecord.json';
+import axios from 'axios';
 export default function RecordsComponent(){
-    const {data,setData} = React.useContext(dataContext);
+    const {data} = React.useContext(dataContext);
     const [likes,setLikes] = React.useState([]);
+    const [likedSong,setLikedSong] = React.useState(false);
     const [genreMenu,setGenreMenu] = React.useState(false);
     const [records,setRecords] = React.useState(data);
     const handleClick = () => {
         setGenreMenu(!genreMenu);
     }
-    useEffect(()=>{
+    React.useEffect(()=>{
         if(!genreMenu)
         setRecords(data);
     },[genreMenu])
     const genreChange = (genre) => {
-        console.log(data.filter((item)=>item.genre.name===genre));
+        // console.log(data.filter((item)=>item.genre.name===genre));
         setRecords(data.filter((item)=>item.genre.name===genre));
     }
+    const liked = async(id,like) => {
+        const result = await axios.patch(likeEndpoint.url+id+'/likes',{"like":!like},{headers:likeEndpoint.headers});
+        console.log(result);
+        setLikedSong(!likedSong);
+    };
      React.useEffect(()=>{(async()=>{
         setLikes(await Promise.all(data.map(async(item,i)=>makeRequest({...getLikes,url:getLikes.url+"/"+item.id+"/likes"}))))
-        })()
-     },[]);
+        })();
+     },[likedSong]);
     if(likes){
         return (
         <div className="records">
@@ -36,9 +43,9 @@ export default function RecordsComponent(){
            {(genreMenu)?<h1>genres</h1>:<h1>all the songs</h1>}
                         <img src={(genreMenu)?icon_grid:icon_genre} onClick={handleClick} alt='icon_genre'/>
             </div>
-            {(genreMenu)?<GenreMenuComponent genreChangeFunc={genreChange}/>:null}
+            {(genreMenu && (likedSong || !likedSong))?<GenreMenuComponent genreChangeFunc={genreChange}/>:null}
             <div className='records-content'>
-                {records.map((item,i)=><RecordCardComponent key={i} data={item} index={i} likes={likes[i]}/>
+                {records.map((item,i)=><RecordCardComponent key={i} data={item} index={i} likes={likes[i]} likeFunc={liked}/>
                 )}
             </div>
             
